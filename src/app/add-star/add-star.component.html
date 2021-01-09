@@ -1,0 +1,33 @@
+<div class="container">
+    <div>
+    <h2>Ajouter Star :</h2>
+    </div>
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >ID Star</label>
+        <input type="text" [(ngModel)]="newStar.idStar"
+        name="idStar" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >Nom Star</label>
+        <input type="text"[(ngModel)]= "newStar.nameStar"
+        name="nomStar" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >Age</label>
+        <input type="number" [(ngModel)]= "newStar.age"
+        name="age" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >Date de la découverte</label>
+        <input type="date" [(ngModel)]= "newStar.dateDiscovered"
+        name="dateDiscovered" class="form-control">
+        </div>
+        <div class="mt-2">
+        <button type="submit" (click)="addStar()" class="btn btn-success">Ajouter</button>
+        <div>
+            <h3>{{message}}</h3>
+        </div>
+        </div>
+    </form>
+</div>   

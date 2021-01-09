@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+        <table class="table table-striped" >
+            <thead>
+                <tr>
+                    <th>Liste de Stars</th>
+                </tr>
+                </thead>
+                <tr> <th>Id Star</th><th>Nom Star</th> <th>Age</th> <th>Date de la découverte</th> </tr>
+            <tbody *ngFor="let star of stars">
+                <tr>
+                    <td>{{star.idStar}}</td>
+                    <td>{{star.nameStar}}</td>
+                    <td>{{star.age}}</td>
+                    <td>{{star.dateDiscovered | date : 'dd/MM/yyyy'}}</td>
+                    <td><a class="btn btn-danger" (click)="supprimerStar(star)">Supprimer</a></td>
+                    <td><a class="btn btn-success" [routerLink]="['/updateStar',star.idStar]">Modifier</a></td>
+
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>
